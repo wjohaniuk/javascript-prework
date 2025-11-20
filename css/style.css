@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .buttons .button-rock {
+  background-color: rgb(48, 47, 47);
+}
+.container .buttons .button-paper {
+  background-color: gray;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0FDQ0Q7QURFRTtFQUNDLGlDQUFBO0FDQUg7QURFRTtFQUNDLHNCQUFBO0FDQUgiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

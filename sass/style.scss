@@ -1,0 +1,14 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.buttons {
+		.button-rock {
+			background-color: rgb(48, 47, 47);
+		}
+		.button-paper {
+			background-color: gray;
+		}
+	}
+}
