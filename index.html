@@ -4,21 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Kamień, nożyce, papier</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="container">
     <div id="buttons">
-      <button id="button-rock" type="button">Kamień</button>
-      <button id="button-paper" type="button">Papier</button>
-      <button id="button-scissors" type="button">Nożyce</button>
+      <div class="box">
+        <button id="rock" type="button">Kamień</button>
+        <i class="fa-solid fa-hand-back-fist"></i>
+      </div>
+
+      <div class="box">
+        <button id="paper" type="button">Papier</button>
+        <i class="fa-solid fa-hand"></i>
+      </div>
+
+      <div class="box">
+        <button id="scissors" type="button">Nożyce</button>
+        <i class="fa-solid fa-hand-scissors"></i>
+      </div>
     </div>
-    <div id="messages"></div>
-  </div>
-  <script src="js/functions.js"></script>
-  <script src="js/script.js"></script>
+
+    <div class="result">
+      <h2>Wynik:</h2>
+      <div id="messages"></div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

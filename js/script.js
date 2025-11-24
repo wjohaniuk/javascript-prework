@@ -1,12 +1,17 @@
-const buttonRock = document.getElementById('button-rock');
-const buttonPaper = document.getElementById('button-paper');
-const buttonScissors = document.getElementById('button-scissors');
+const buttonRock = document.getElementById('rock');
+const buttonPaper = document.getElementById('paper');
+const buttonScissors = document.getElementById('scissors');
 let computerMove, randomNumber;
+const resultText = document.getElementById('messages');
 
 function printMessage(msg) {
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
+}
+
+function printIconResult(icon) {
+	let div = document.createElement('div');
 }
 
 function clearMessages() {
@@ -20,9 +25,7 @@ function buttonClicked(argButtonName) {
 	displayResult(argButtonName, computerMove);
 }
 
-
 function getMoveName(argMoveId) {
-	console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
 	if (argMoveId == 1) {
 		return 'kamień';
 	} else if (argMoveId == 2) {
@@ -38,24 +41,24 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
-	console.log(
-		'wywołano funkcję displayResults z argumentami: ' +
-			argPlayerMove +
-			', ' +
-			argComputerMove
-	);
 	if (
 		(argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
 		(argPlayerMove == 'kamień' && argComputerMove == 'nożyce') ||
 		(argPlayerMove == 'nożyce' && argComputerMove == 'papier')
 	) {
+		printMessage('<i class="fa-regular fa-face-laugh-beam"></i>');
 		printMessage('Wygrywasz!');
+		resultText.style.color = 'green';
 	} else if (argComputerMove == argPlayerMove) {
-		printMessage('Remis');
+		printMessage('<i class="fa-regular fa-face-meh"></i>');
+		printMessage('Remis!');
+		resultText.style.color = 'orange';
 	} else {
-		printMessage('Przegrywasz :(');
+		printMessage('<i class="fa-regular fa-face-frown-open"></i>');
+		printMessage('Przegrywasz!');
+		resultText.style.color = 'red';
 	}
-	printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+	printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + '.');
 }
 
 buttonRock.addEventListener('click', function () {

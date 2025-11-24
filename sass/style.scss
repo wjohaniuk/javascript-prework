@@ -1,14 +1,71 @@
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+$white-color: #fff;
+$black-color: #000;
+$rock-bg: rgb(107, 106, 106);
+$paper-bg: #d8d4d4;
+$scissors-bg: rgb(192, 192, 192);
+$highlited-color: rgb(240, 255, 255);
 
-	.buttons {
-		.button-rock {
-			background-color: rgb(48, 47, 47);
+body {
+	margin: 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.container {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 20px;
+
+	.result {
+		i {
+			font-size: 64px;
+			padding: 32px;
 		}
-		.button-paper {
-			background-color: gray;
+		#messages {
+			font-weight: 700;
+		}
+	}
+}
+
+#buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+
+	.box {
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 32px;
+
+		i {
+			padding: 32px;
+			font-size: 32px;
+		}
+		button {
+			border-radius: 15%;
+		}
+		#rock {
+			background-color: $rock-bg;
+			color: $white-color;
+		}
+		#rock:hover {
+			background-color: $highlited-color;
+			color: $black-color;
+		}
+		#paper {
+			background-color: $paper-bg;
+		}
+		#paper:hover {
+			background-color: $highlited-color;
+			color: $black-color;
+		}
+		#scissors {
+			background-color: $scissors-bg;
+			color: $black-color;
+		}
+		#scissors:hover {
+			background-color: $highlited-color;
+			color: $black-color;
 		}
 	}
 }
