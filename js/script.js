@@ -1,17 +1,13 @@
 const buttonRock = document.getElementById('rock');
 const buttonPaper = document.getElementById('paper');
 const buttonScissors = document.getElementById('scissors');
-let computerMove, randomNumber;
 const resultText = document.getElementById('messages');
+let computerMove, randomNumber;
 
 function printMessage(msg) {
-	let div = document.createElement('div');
+	const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
-}
-
-function printIconResult(icon) {
-	let div = document.createElement('div');
 }
 
 function clearMessages() {
